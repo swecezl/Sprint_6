@@ -6,7 +6,7 @@ from pages.order_page import OrderPage
 
 class TestOrderPage:
 
-    @allure.title('Оформление заказа по кнопке "Заказать" в шапке страницы')
+    @allure.title('Оформление заказа по кнопке "Заказать" в шапке страницы по набору данных test_user_1')
     @allure.description('Проверяем создание заказа и переход на страницу успешно созданного заказа')
     def test_order_flow_header_order_button(self, driver):
         order_page = OrderPage(driver)
@@ -18,7 +18,7 @@ class TestOrderPage:
         order_page.complete_order()
         assert TextData.cancel_order_text in order_page.cancel_order_text(), f'Заказ успешно создан'
 
-    @allure.title('Оформление заказа по большой копке "Заказать" в середине главной страницы')
+    @allure.title('Оформление заказа по большой копке "Заказать" в середине главной страницы по набору данных test_user_2')
     @allure.description('Проверяем создание заказа и переход на страницу успешно созданного заказа')
     def test_order_flow_big_order_button(self, driver):
         order_page = OrderPage(driver)

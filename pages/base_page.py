@@ -3,7 +3,6 @@ from selenium.webdriver.support import expected_conditions
 import allure
 
 
-
 class BasePage:
 
     @allure.step('Открываем браузер Firefox')
@@ -34,6 +33,3 @@ class BasePage:
     def get_element_text(self, locator):
         element = self.find_element_with_wait(*locator)
         return element.text
-
-
-

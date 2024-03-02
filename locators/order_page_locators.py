@@ -4,13 +4,13 @@ from selenium.webdriver.common.by import By
 class OrderPageLocators:
     #страница ввода данных пользователя
     HEADER_ORDER_BUTTON = By.XPATH, "//*[@class='Button_Button__ra12g']"
-    BIG_ORDER_BUTTON = By.XPATH, "/html/body/div/div/div/div[4]/div[2]/div[5]/button"
+    BIG_ORDER_BUTTON = By.XPATH, "//*[contains(@class, 'Home_FinishButton')]/button[text()='Заказать']"
     NAME = By.XPATH, "//*[@placeholder='* Имя']"
     LASTNAME = By.XPATH, "//*[@placeholder='* Фамилия']"
     ADDRESS = By.XPATH, "//*[@placeholder='* Адрес: куда привезти заказ']"
     STATIONS_FIELD = By.XPATH, "//*[@placeholder='* Станция метро']"
     STATION_DROPDOWN = By.XPATH, "//*[contains(@class, 'select-search__select')]/ul/li"
-    INPUT_PHONE_NUMBER = By.XPATH, "//*[@id='root']/div/div[2]/div[2]/div[5]/input"
+    INPUT_PHONE_NUMBER = By.XPATH, "//*[@placeholder='* Телефон: на него позвонит курьер']"
     NEXT_OR_ORDER_BUTTON = By.XPATH, "//*[@class='Button_Button__ra12g Button_Middle__1CSJM']"
 
     #страница ввода информации об аренда
@@ -28,4 +28,4 @@ class OrderPageLocators:
     CHECK_STATUS_BUTTON = By.XPATH, "//*[text()='Посмотреть статус']"
 
     #страница созданного заказа
-    CANCEL_ORDER_BUTTON = By.XPATH, "/html/body/div/div/div[2]/div[2]/div[1]/button"
+    CANCEL_ORDER_BUTTON = By.XPATH, "//*[contains(@class, 'Track_OrderInfo')]/button[text()='Отменить заказ']"
